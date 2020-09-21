@@ -10,7 +10,7 @@ export default class GameBoard extends React.Component {
 
   toggleButton = () => {
     this.setState({ active: !this.state.active })
-    $("td.game-cubes").click(function() {
+    $("td").click(function() {
       $(this).toggleClass("active")
     })
   }
