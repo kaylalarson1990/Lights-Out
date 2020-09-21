@@ -1,9 +1,17 @@
 import React from 'react';
-import '../App.css';
+import '../GameBoard.css';
 
-export default class Game extends React.Component {
+export default class GameBoard extends React.Component {
   render() {
     return (
+      <>
+      <div className="header">
+        <h1 id="title">Lights Out</h1>
+        <div className="sub-header">
+          <button>Start</button>
+          <p id="timer">Timer:</p>
+        </div>
+      </div>
       <div className="game-container">
         <table>
           <tr>
@@ -51,6 +59,7 @@ export default class Game extends React.Component {
           </tr>
         </table>
       </div>
+      </>
     )
   }
 }

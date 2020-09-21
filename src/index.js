@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Game from './components/Game';
+import GameBoard from './components/GameBoard';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Game />
+    <GameBoard />
   </React.StrictMode>,
   document.getElementById('root')
 );
