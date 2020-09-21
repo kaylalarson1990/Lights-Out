@@ -15,13 +15,25 @@ export default class GameBoard extends React.Component {
     })
   }
 
+  componentDidMount =() => {
+    const randomClass = ['game-cubes active', 'game-cubes'];
+    $("td").each(function() {
+      let index = Math.floor(Math.random() * randomClass.length);
+      $(this).addClass(randomClass[index]);
+    })
+  }
+
+  restartGame = () => {
+    window.location.reload(false);
+  }
+
   render() {
     return (
       <>
       <div className="header">
         <h1 id="title">Lights Out</h1>
         <div className="sub-header">
-          <button>Start</button>
+          <button onClick={this.restartGame}>Restart</button>
           <p id="timer">Timer:</p>
         </div>
       </div>
@@ -29,55 +41,55 @@ export default class GameBoard extends React.Component {
         <table>
           <thead>
             <tr>
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
             </tr>
           </thead>
         </table>
         <table>
           <thead>
             <tr>
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
             </tr>
           </thead>
         </table>
         <table>
         <thead>
             <tr>
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
             </tr>
           </thead>
         </table>
         <table>
           <thead>
             <tr>
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
             </tr>
           </thead>
         </table>
         <table>
           <thead>
             <tr>
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
-              <td className="game-cubes" onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
+              <td onClick={this.toggleButton} />
             </tr>
           </thead>
         </table>

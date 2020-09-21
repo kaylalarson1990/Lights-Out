@@ -27,6 +27,7 @@ button {
 }
 
 .game-container {
+  border: 1px #247BA0 solid;
   display: flex;
   flex-direction: column;
   margin: 2em;
@@ -37,7 +38,7 @@ table {
 }
 
 .game-cubes {
-  border: 0.1em #247BA0 solid;
+  border: 1px #247BA0 solid;
   height: 3em;
 }
 
