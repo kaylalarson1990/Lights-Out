@@ -32,7 +32,15 @@ button {
   margin: 2em;
 }
 
+table {
+  border-spacing: 0;
+}
+
 .game-cubes {
-  border: 0.15em #247BA0 solid;
+  border: 0.1em #247BA0 solid;
   height: 3em;
+}
+
+.active {
+  background-color: #247BA0;
 }

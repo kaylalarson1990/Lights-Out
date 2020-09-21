@@ -1,7 +1,20 @@
 import React from 'react';
 import '../GameBoard.css';
+import $ from 'jquery';
 
 export default class GameBoard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { active: false }
+  }
+
+  toggleButton = () => {
+    this.setState({ active: !this.state.active })
+    $("td.game-cubes").click(function() {
+      $(this).toggleClass("active")
+    })
+  }
+
   render() {
     return (
       <>
@@ -14,49 +27,59 @@ export default class GameBoard extends React.Component {
       </div>
       <div className="game-container">
         <table>
-          <tr>
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-          </tr>
+          <thead>
+            <tr>
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+            </tr>
+          </thead>
         </table>
         <table>
-          <tr>
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-          </tr>
+          <thead>
+            <tr>
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+            </tr>
+          </thead>
         </table>
         <table>
-          <tr>
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-          </tr>
+        <thead>
+            <tr>
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+            </tr>
+          </thead>
         </table>
         <table>
-          <tr>
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-          </tr>
+          <thead>
+            <tr>
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+            </tr>
+          </thead>
         </table>
         <table>
-          <tr>
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-            <td className="game-cubes" />
-          </tr>
+          <thead>
+            <tr>
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+              <td className="game-cubes" onClick={this.toggleButton} />
+            </tr>
+          </thead>
         </table>
       </div>
       </>
