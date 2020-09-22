@@ -14,9 +14,8 @@ export default class GameBoard extends React.Component {
         active: !this.state.active, 
         counter: this.state.counter + 1
    });
-    $("td").click(function() {
-      $(this).toggleClass("active")
-      $(this).next().toggleClass("active")
+    $("td").click(function(e) {
+      $(this).next().addBack().toggleClass("active")
       $(this).prev().toggleClass("active")
     })
   }
@@ -38,10 +37,10 @@ export default class GameBoard extends React.Component {
       <>
       <div className="header">
         <h1 id="title">Lights Out</h1>
-        <div className="sub-header">
+        <div className="game-options">
           <button onClick={this.restartGame}>Restart</button>
           <StopWatch />
-          <p id="timer">Moves: {this.state.counter}</p>
+          <p id="moves">Moves: {this.state.counter}</p>
         </div>
       </div>
       <div className="game-container">

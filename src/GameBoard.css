@@ -18,11 +18,11 @@ button {
   color: #247BA0;
 }
 
-.sub-header {
+.game-options {
   display: flex;
 }
 
-#timer {
+#timer, #moves {
   margin: 0.25em 0 0 2em;
 }
 
