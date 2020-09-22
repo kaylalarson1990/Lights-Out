@@ -12,6 +12,8 @@ export default class GameBoard extends React.Component {
     this.setState({ active: !this.state.active })
     $("td").click(function() {
       $(this).toggleClass("active")
+      $(this).next().toggleClass("active")
+      $(this).prev().toggleClass("active")
     })
   }
 
