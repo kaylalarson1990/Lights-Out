@@ -10,11 +10,9 @@ export default class GameBoard extends React.Component {
   }
 
   toggleButton = () => {
-    this.setState(prevState => {
-      return {
+    this.setState({
         active: !this.state.active, 
-        counter: prevState.counter + 1
-      }
+        counter: this.state.counter + 1
    });
     $("td").click(function() {
       $(this).toggleClass("active")
