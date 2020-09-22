@@ -1,15 +1,21 @@
 import React from 'react';
 import '../GameBoard.css';
+import StopWatch from './StopWatch';
 import $ from 'jquery';
 
 export default class GameBoard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false }
+    this.state = { active: false, counter: 0 }
   }
 
   toggleButton = () => {
-    this.setState({ active: !this.state.active })
+    this.setState(prevState => {
+      return {
+        active: !this.state.active, 
+        counter: prevState.counter + 1
+      }
+   });
     $("td").click(function() {
       $(this).toggleClass("active")
       $(this).next().toggleClass("active")
@@ -36,7 +42,8 @@ export default class GameBoard extends React.Component {
         <h1 id="title">Lights Out</h1>
         <div className="sub-header">
           <button onClick={this.restartGame}>Restart</button>
-          <p id="timer">Timer:</p>
+          <StopWatch />
+          <p id="timer">Moves: {this.state.counter}</p>
         </div>
       </div>
       <div className="game-container">
