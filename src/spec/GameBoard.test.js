@@ -19,6 +19,7 @@ const column = 2;
 const gameBoardWrapper = shallow(<GameBoard>{title}</GameBoard>);
 const lightWrapper = shallow(<Light toggle={lights[row]} row={row} column={column} click={jest.fn}/>);
 const gridWrapper = shallow(<Grid lights={lights[row]} row={row} click={jest.fn} />);
+const successWrapper = shallow(<Success />);
 
 describe('GameBoard', () => {
   it('renders the GameBoards children', () => {
@@ -29,7 +30,7 @@ describe('GameBoard', () => {
   it('renders the GameBoard component', () => {
     expect(gameBoardWrapper.find(Grid)).toHaveLength(5);
     expect(gameBoardWrapper.containsMatchingElement(<Grid />)).toEqual(true);
-  })
+  });
 });
 
 describe('Light', () => {
@@ -47,8 +48,14 @@ describe('Grid', () => {
   it('renders the Light component', () => {
     expect(gridWrapper.find(Light)).toHaveLength(5);
     expect(gridWrapper.containsMatchingElement(<Light />)).toEqual(true);
-  })
-})
+  });
+});
+
+describe('success', () => {
+  it('provides a success message to the user when they win', () => {
+    expect(successWrapper.find('p').text()).toEqual('You won!')
+  });
+});
 
 describe('reloads page on game restart', () => {
   const { reload } = window.location;
