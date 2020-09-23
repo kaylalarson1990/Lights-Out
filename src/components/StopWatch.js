@@ -22,7 +22,7 @@ export default class StopWatch extends React.Component {
   render() {
     return (
       <div>
-        <p id="timer">{transformToSeconds(this.state.seconds)}</p>
+        <p id="timer">Time: {transformToSeconds(this.state.seconds)}</p>
       </div>
     )
   }
