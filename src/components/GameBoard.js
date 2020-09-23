@@ -32,7 +32,9 @@ export default class GameBoard extends React.Component {
   targetAdjacent = (row1, column1, row2, column2) => {
     const rows = Math.abs(row1 - row2);
     const columns = Math.abs(column1 - column2);
-    return (rows == 0 && columns == 0) || (rows == 1 && columns == 0) || (rows == 0 && columns == 1);
+    return (
+      (rows == 0 && columns == 0) || (rows == 1 && columns == 0) || (rows == 0 && columns == 1)
+    )
   }
 
   toggleLight = (row, column) => {
@@ -56,7 +58,7 @@ export default class GameBoard extends React.Component {
         <div className="header">
           <h1 className="title">Lights Out</h1>
           <div className="game-options">
-            <button onClick={ this.restartGame }>Restart</button>
+            <button className="restart" onClick={ this.restartGame }>Restart</button>
             <StopWatch />
             <p className="moves">Moves: { moves }</p>
           </div>
