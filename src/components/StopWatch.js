@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-const transformToSeconds = (sec) => {
-  return Math.floor(sec / 60) + ':' + ('0' + sec % 60).slice(-2)
+const transformToSeconds = (second) => {
+  return Math.floor(second / 60) + ':' + ('0' + second % 60).slice(-2)
 }
 export default class StopWatch extends React.Component {
   constructor(props) {
@@ -10,7 +10,6 @@ export default class StopWatch extends React.Component {
     this.state = {
       seconds: 0
     }
-    this.incrementer = null;
   }
 
   componentDidMount() {
@@ -22,7 +21,7 @@ export default class StopWatch extends React.Component {
   render() {
     return (
       <div>
-        <p id="timer">Time: {transformToSeconds(this.state.seconds)}</p>
+        <p className="timer">Time: {transformToSeconds(this.state.seconds)}</p>
       </div>
     )
   }
