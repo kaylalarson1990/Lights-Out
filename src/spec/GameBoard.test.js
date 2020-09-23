@@ -25,11 +25,16 @@ describe('GameBoard', () => {
     expect(gameBoardWrapper.find('h1').text()).toEqual(title);
     expect(gameBoardWrapper.find('.restart').text()).toEqual(button);
   });
+
+  it('renders the GameBoard component', () => {
+    expect(gameBoardWrapper.find(Grid)).toHaveLength(5);
+    expect(gameBoardWrapper.containsMatchingElement(<Grid />)).toEqual(true);
+  })
 });
 
 describe('Light', () => {
   it('toggles class active on click', () => {
-    const gridCube = lightWrapper.find('span').first().simulate('click');
+    const gridCube = lightWrapper.find('span').simulate('click');
     expect(gridCube.hasClass('active')).toEqual(true);
   });
 });
@@ -37,6 +42,11 @@ describe('Light', () => {
 describe('Grid', () => {
   it('renders the game container', () => {
     expect(gridWrapper.hasClass('game-container')).toEqual(true);
+  });
+
+  it('renders the Light component', () => {
+    expect(gridWrapper.find(Light)).toHaveLength(5);
+    expect(gridWrapper.containsMatchingElement(<Light />)).toEqual(true);
   })
 })
 
