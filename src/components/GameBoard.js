@@ -2,6 +2,7 @@ import React from 'react';
 import '../GameBoard.css';
 import StopWatch from './StopWatch';
 import Grid from './Grid';
+import Success from './Success';
 import _ from 'lodash';
 
 const indices = [0, 1, 2, 3, 4];
@@ -9,7 +10,7 @@ const indices = [0, 1, 2, 3, 4];
 export default class GameBoard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { size: 5, data: this.randomizeGameBoard(5), moves: 0 }
+    this.state = { success: true, size: 5, data: this.randomizeGameBoard(5), moves: 0 }
   }
 
   restartGame = () => {
@@ -58,6 +59,7 @@ export default class GameBoard extends React.Component {
         <div className="header">
           <h1 className="title">Lights Out</h1>
           <div className="game-options">
+            {this.state.success ? <Success /> : ""}
             <button className="restart" onClick={ this.restartGame }>Restart</button>
             <StopWatch />
             <p className="moves">Moves: { moves }</p>

@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 import GameBoard from '../components/GameBoard';
 import Grid from '../components/Grid';
 import Light from '../components/Light';
+import Success from '../components/Success';
 
 test('renders Lights Out title', () => {
   const { getByText } = render(<GameBoard />);
@@ -51,7 +52,7 @@ describe('Grid', () => {
   });
 });
 
-describe('success', () => {
+describe('Success', () => {
   it('provides a success message to the user when they win', () => {
     expect(successWrapper.find('p').text()).toEqual('You won!')
   });
