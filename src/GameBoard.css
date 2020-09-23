@@ -40,7 +40,7 @@ table {
   border-spacing: 0;
 }
 
-#game-cubes {
+.game-cubes {
   background-color: #1a1111;
   border: 2px black solid;
   height: 7em;
