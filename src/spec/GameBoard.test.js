@@ -32,10 +32,15 @@ describe('GameBoard', () => {
     expect(gameBoardWrapper.find(Grid)).toHaveLength(5);
     expect(gameBoardWrapper.containsMatchingElement(<Grid />)).toEqual(true);
   });
+
+  it('should not render the Success component on game start', () => {
+    expect(gameBoardWrapper.containsMatchingElement(<Success />)).toEqual(false);
+  });
 });
 
 describe('Light', () => {
   it('toggles class active on click', () => {
+    //this is not passing properly - false positive test. 
     const gridCube = lightWrapper.find('span').simulate('click');
     expect(gridCube.hasClass('active')).toEqual(true);
   });
@@ -53,7 +58,7 @@ describe('Grid', () => {
 });
 
 describe('Success', () => {
-  it('provides a success message to the user when they win', () => {
+  it('renders a success message', () => {
     expect(successWrapper.find('p').text()).toEqual('You won!')
   });
 });
