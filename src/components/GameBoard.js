@@ -38,7 +38,7 @@ export default class GameBoard extends React.Component {
     const r = Math.abs(r1 - r2);
     const c = Math.abs(c1 - c2);
     return (
-      (r == 0 && c == 0) || (r == 1 && c == 0) || (r == 0 && c == 1)
+      (r === 0 && c === 0) || (r === 1 && c === 0) || (r === 0 && c === 1)
     )
   }
 
@@ -46,7 +46,7 @@ export default class GameBoard extends React.Component {
     let playerWins = true;
     const { data, moves, gridSize } = this.state;
     const targetRC = this.createGameBoard(gridSize, (board, r, c) => {
-      const toggle = data[r][c] != this.targetAdjacentTile(row, column, r, c);
+      const toggle = data[r][c] !== this.targetAdjacentTile(row, column, r, c);
       if (toggle) { playerWins = false }
       return toggle;
     });
