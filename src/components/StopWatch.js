@@ -5,8 +5,8 @@ const transformToSeconds = (second) => {
   return Math.floor(second / 60) + ':' + ('0' + second % 60).slice(-2)
 }
 export default class StopWatch extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       seconds: 0
     }
