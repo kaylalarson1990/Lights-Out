@@ -59,7 +59,7 @@ describe('Grid', () => {
 
 describe('Success', () => {
   it('renders a success message', () => {
-    expect(successWrapper.find('p').text()).toEqual('You won!')
+    expect(successWrapper.find('p').text()).toEqual('Congratulations, you won!')
   });
 });
 

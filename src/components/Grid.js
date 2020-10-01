@@ -14,6 +14,7 @@ function Grid(props) {
       row={ row }
       column={ column }
       click={ click } 
+      key={Math.random()}
     />)
   });
 

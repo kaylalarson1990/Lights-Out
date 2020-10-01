@@ -62,7 +62,8 @@ export default class GameBoard extends React.Component {
         <Grid
           lights={ data[row] }
           row={ row }
-          click={ this.toggleLight } 
+          click={ this.toggleLight }
+          key={Math.random()}
         />
       );
     });
