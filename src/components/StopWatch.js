@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const transformToSeconds = (second) => {
   return Math.floor(second / 60) + ':' + ('0' + second % 60).slice(-2)
 }
