@@ -16,12 +16,13 @@
 
 .title {
   color: #1a1111;
+  font-size: 3em;
   font-weight: 300;
 }
 
 .game-options {
-  display: flex;
   color: #1a1111;
+  display: flex;
   margin-bottom: 2em;
 }
 
