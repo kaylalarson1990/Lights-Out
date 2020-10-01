@@ -3,7 +3,10 @@ Lights Out is a game built using React.
 The idea of the game is to turn all of the lights on by clicking each tile. 
 When a tile is clicked, it will toggle all of the adjacent tiles.
 Once all lights are on, the player should receive a `Success` message and the game would be over.
+
+### Screenshots
 ![Lights Out Gif](https://media.giphy.com/media/JhOn185GxEagki9DxD/giphy.gif)
+
 
 ## Technology and Stack
 See `package.json` for version numbers.
