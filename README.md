@@ -19,7 +19,8 @@ See `package.json` for version numbers.
 
 ## Install
 1. Clone down the repo: `git clone git@github.com:kaylalarson1990/Lights-Out.git`
-2. Install all JS dependencies: `npm install`
+2. `cd` into `Lights-Out`
+3. Install all JS dependencies: `npm install`
 
 ## Start the server
 Run `npm start`
