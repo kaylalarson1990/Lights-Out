@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  margin: 0 2em;
+  margin: 0 4em;
 }
 
 .restart {
@@ -11,7 +11,7 @@
   color: #1a1111;
   font-weight: 700;
   padding: 0.6em;
-  width: 7em;
+  width: 8em;
 }
 
 .title {
@@ -31,20 +31,15 @@
 
 .game-container {
   box-sizing: border-box;
-  margin-left: 2em;
-}
-
-table {
-  border-spacing: 0;
+  margin-left: 4em;
 }
 
 .game-cubes {
   background-color: #1a1111;
-  border: 2px black solid;
-  display: inline-block;
-  height: 75px;
-  width: 75px;
-  margin: 1px;
+  border: 10px black solid;
+  display: table-cell;
+  height: 8em;
+  width: 8em;
 }
 
 .active {

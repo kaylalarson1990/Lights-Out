@@ -8,11 +8,13 @@ function Grid(props) {
   const { lights, row, click } = props;
 
   _.forEach(indices, (column) => {
-    gameCubes.push(<Light
+    gameCubes.push(
+    <Light
       toggle={ lights[column] }
       row={ row }
       column={ column }
-      click={ click } />)
+      click={ click } 
+    />)
   });
 
   return <div className="game-container">{ gameCubes }</div>
