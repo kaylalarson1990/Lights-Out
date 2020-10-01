@@ -45,3 +45,7 @@
 .active {
   background-color: #78FFD6;
 }
+
+.success {
+  font-size: 1.5em;
+}

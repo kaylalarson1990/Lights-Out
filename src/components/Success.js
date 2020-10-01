@@ -2,7 +2,7 @@ import React from 'react';
 
 function Success() {
   return (
-    <p>You won!</p>
+    <p className="success">Congratulations, you won!</p>
   )
 }
 

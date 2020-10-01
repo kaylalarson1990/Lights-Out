@@ -50,7 +50,7 @@ export default class GameBoard extends React.Component {
       if (toggle) { playerWins = false }
       return toggle;
     });
-    playerWins ? this.setState({ success: true }) : this.setState({ data: targetRC, moves: moves + 1 });
+    this.setState(playerWins ? { success: true } : { data: targetRC, moves: moves + 1 })
   }
 
   render() {
@@ -71,7 +71,6 @@ export default class GameBoard extends React.Component {
       <>
         <div className="header">
           <h1 className="title">Lights Out</h1>
-          { this.state.success ? <Success /> : "" }
           <div className="game-options">
             <button className="restart" onClick={ this.restartGame }>
               { this.state.success ? 'New Game' : 'Restart' }
@@ -79,6 +78,7 @@ export default class GameBoard extends React.Component {
             <StopWatch />
             <p className="moves">Moves: { moves }</p>
           </div>
+          { this.state.success ? <Success /> : "" }
         </div>
         <div>
           { gameCubes }
